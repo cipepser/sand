@@ -45,8 +45,26 @@ func TestGraph_AddEdge(t *testing.T) {
 		name   string
 		fields fields
 		args   args
+		want   *Graph
 	}{
-		// TODO: Add test cases.
+		{
+			name: "add an edge from 1 to 0",
+			fields: fields{
+				n:     2,
+				edges: make([][]int, 2),
+			},
+			args: args{
+				u: 1,
+				v: 0,
+			},
+			want: &Graph{
+				n: 2,
+				edges: [][]int{
+					[]int{1},
+					[]int{0},
+				},
+			},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -55,6 +73,9 @@ func TestGraph_AddEdge(t *testing.T) {
 				edges: tt.fields.edges,
 			}
 			g.AddEdge(tt.args.u, tt.args.v)
+			if !reflect.DeepEqual(g, tt.want) {
+				t.Errorf("AddEdge() = %v, want = %v", g, tt.want)
+			}
 		})
 	}
 }
