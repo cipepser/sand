@@ -4,3 +4,4 @@
 
 * [graph](https://github.com/cipepser/sand/tree/master/graph)
 * [sliceVSmap](https://github.com/cipepser/sand/tree/master/sliceVSmap)
+* [sliceVSmapDelete](https://github.com/cipepser/sand/tree/master/sliceVSmapDelete)
