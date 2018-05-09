@@ -29,6 +29,21 @@ delete(map[typeA]typeB, typeA)
 * sliceから削除したい要素のindexは`n/2`を使う
 * mapから削除したい要素を`n/2`とする
 
+## 環境
+
+```sh
+macOS High Sierra version 10.13.4（17E202）
+MacBook Pro (Retina, 13-inch, Early 2015)
+2.7 GHz Intel Core i5
+16 GB 1867 MHz DDR3
+Intel Iris Graphics 6100 1536 MB
+```
+
+```sh
+❯ go version
+go version go1.10.1 darwin/amd64
+```
+
 ## 実装
 
 map, sliceどちらも削除前の状態を毎回使いまわす必要があるが、どちらも参照型で実装されるので、毎回`make`で作り直すことにする。
