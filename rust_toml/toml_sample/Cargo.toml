@@ -1,0 +1,6 @@
+[package]
+name = "toml_sample"
+version = "0.1.0"
+authors = ["cipepser <respepic@gmail.com>"]
+
+[dependencies]
